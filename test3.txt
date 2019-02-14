@@ -1,0 +1,48 @@
+? 
+  Matthew Rinne
+  test3.txt
+  cs403 Programming Languages
+?
+
+#include <stdfunc.h>
+#include <array.h>
+
+
+func square(var num)
+{
+    return num * num$
+}
+
+func doubleString(var str)
+{
+    return string + string$
+}
+
+
+main ()
+{
+    var x = 10$
+    x = call square(x)$
+
+    var y = 5$
+    y = call square(call square(y))$
+
+    var str = 'ha'$
+    str = call doubleString(call doubleString(str))$
+    call print(str)$
+
+    if (x == 100 && y == 25)
+    {
+        call print('WOW')$
+    }
+    else if (x == 100 && y == 125)
+    {
+        call print('WOOH')$
+    }
+    else
+    {
+        call print(str)$
+    }
+
+    return$
+}
