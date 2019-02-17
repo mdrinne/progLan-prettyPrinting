@@ -5,13 +5,14 @@
 ?
 
 #include "example.h"
-#include <rand.h>
 
-func newFunc(var numb, var text) {
+func newFunc(var numb, var text)
+{
     return numb$
 }
 
-func secondFunc() {
+func secondFunc()
+{
     var xyz = 'hello, world!'$
     return xyz$
 }
@@ -29,26 +30,31 @@ main () {
 
     ? functioncall (also uses optExprList) ?
     var a = call newFunc(x, string)$
-    var b = secondFunc()$
+    var b = call secondFunc()$
 
     ? if block ?
-    if (x = 58) {
+    if (x = 58)
+    {
         x = x - 1$
     }
-    else if (x = 56) {
+    else if (x = 56)
+    {
         x = x + 1$
     }
-    else {
+    else
+    {
         x = 57$
     }
 
     ? while loop ?
-    while (x != 59) {
+    while (x != 59)
+    {
         x = x + 1$
     }
 
     ? for loop ?
-    for (var i=0; i<5; i++) {
+    for (var i=0; i<5; i++)
+    {
         x * 5$
     }
 

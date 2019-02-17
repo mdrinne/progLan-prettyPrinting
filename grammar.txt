@@ -1,11 +1,14 @@
 program : includes mainFunc
-        | includes defs mainFunc
+        | includes optDefs mainFunc
 
 defs : def
      | def defs
 
 def : varDef MONEY
     | funcDef
+
+optDefs : defs
+        | EMPTY
 
 includes : include
          | include includes
@@ -44,6 +47,7 @@ oper : PLUS
      | GREATERTHANOREQUAL
      | LESSTHAN
      | LESSTHANOREQUAL
+     | MOD
      | NOT EQUALS
 
 expr : unary

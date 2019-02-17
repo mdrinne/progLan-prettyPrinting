@@ -1,6 +1,6 @@
 /*
  * Matthew Rinne
- * recognize.c
+ * pp.c
  * cs403 Programming Languages
  */
 
@@ -14,7 +14,7 @@
 #include <stdlib.h>
 
 
-int
+int 
 main(int argc, char const *argv[])
 {
     FILE *fp = fopen(argv[argc-1], "r");
@@ -22,9 +22,6 @@ main(int argc, char const *argv[])
     advance();
     Lexeme *tree = program();
     match(END_OF_FILE);
-    printf("legal\n");
-    // printf("start line: %d\n", getLineNum(car(car(car(tree)))));
-    // printf("tree type: %s\n", getLexemeType(tree));
     pp(tree);
     fclose(fp);
     return 0;

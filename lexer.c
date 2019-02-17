@@ -156,7 +156,7 @@ lexVarOrKeyword()
     char *buffer = malloc(sizeof(char) * len+1);
     char ch;
     ch = readChar();
-    while (ch != EOF && (isalpha(ch) || isdigit(ch)))
+    while (ch != EOF && (isalpha(ch) || isdigit(ch) || ch == '_'))
     {
         if (index == len)
         {

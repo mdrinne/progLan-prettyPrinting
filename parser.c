@@ -66,7 +66,7 @@ program()
 {
     Lexeme *i, *d, *m;
     i = includes();
-    if (defsPending()) d = defs();
+    if (defsPending()) d = optDefs();
     else d = NULL;
     m = mainFunc();
     return cons(PROGRAM,i,cons(GLUE,d,m));
@@ -78,7 +78,7 @@ defs()
 {
     Lexeme *d, *ds;
     d = def();
-    if (defsPending()) ds = defs();
+    if (defsPending()) ds = optDefs();
     else ds = NULL;
     return cons(DEFS,d,ds);
 }
@@ -109,6 +109,23 @@ int
 defPending()
 {
     return varDefPending() || funcDefPending();
+}
+
+
+Lexeme *
+optDefs()
+{
+    Lexeme *d;
+    if (defsPending()) d = defs();
+    else d = NULL;
+    return cons(OPTDEFS,d,NULL);
+}
+
+
+int
+optDefsPending()
+{
+    return defsPending();
 }
 
 

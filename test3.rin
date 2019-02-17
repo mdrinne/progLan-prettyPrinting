@@ -4,8 +4,7 @@
   cs403 Programming Languages
 ?
 
-#include <stdfunc.h>
-#include <array.h>
+#include "stdfunc.h"
 
 
 func square(var num)

@@ -98,6 +98,7 @@ char *DOUBLESELFOP;
 char *BLOCK;
 char *STATEMENTS;
 char *STATEMENT;
+char *OPTDEFS;
 
 
 #endif

@@ -22,6 +22,8 @@ Lexeme *defs();
 int     defsPending();
 Lexeme *def();
 int     defPending();
+Lexeme *optDefs();
+int     optDefsPending();
 Lexeme *includes();
 int     includesPending();
 Lexeme *includeStatement();

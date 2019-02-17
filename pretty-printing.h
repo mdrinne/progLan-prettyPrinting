@@ -12,10 +12,13 @@
 #include "lexeme.h"
 
 void fixLine(Lexeme *cur);
+void fixLineElse(Lexeme *cur);
+// void fixTabs();
 void pp(Lexeme *tree);
 void printProgram(Lexeme *tree);
 void printDefs(Lexeme *tree);
 void printDef(Lexeme *tree);
+void printOptDefs(Lexeme *tree);
 void printIncludes(Lexeme *tree);
 void printInclude(Lexeme *tree);
 void printFuncDef(Lexeme *tree);
